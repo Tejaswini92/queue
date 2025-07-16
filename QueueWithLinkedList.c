@@ -46,3 +46,29 @@ int dequeue_data () {
     global_queue.add_ptr = NULL;
   }
 }
+
+// Driver code to test the queue implementation
+int main() {
+    initialize_queue ();
+    int output;
+    // Enqueue elements into the queue
+    enqueue(10);
+    enqueue(20);
+
+    // Dequeue elements from the queue
+    output = dequeue();
+    printf("dequeue %d", output);
+    output = dequeue();
+    printf("dequeue %d", output);
+
+    // Enqueue more elements into the queue
+    enqueue(30);
+    enqueue(40);
+    enqueue(50);
+
+    // Dequeue an element from the queue (this should print 30)
+    dequeue();
+    printf("dequeue %d", output);
+    
+    return 0;
+}
